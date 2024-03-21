@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "UI_Test"
+rootProject.name = "BMI"
 include(":app")
  
