@@ -16,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void sendString(View view) {
-        EditText edtName = (EditText) findViewById(R.id.edtName);
-        String string2Send = edtName.getText().toString();
+        EditText edtInput = (EditText) findViewById(R.id.edtInput);
+        String string2Send = edtInput.getText().toString();
 
         Intent intent = new Intent(this, DisplayStringActivity.class);
-        intent.putExtra("userName", string2Send);
+        intent.putExtra("userInput", string2Send);
         startActivity(intent);
     }
 }

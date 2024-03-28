@@ -15,6 +15,6 @@ public class DisplayStringActivity extends AppCompatActivity {
 
         TextView txvShow = (TextView) findViewById(R.id.txvShow);
         Intent intent = getIntent();
-        txvShow.setText(intent.getStringExtra("userName") + " 您好!");
+        txvShow.setText("輸入: " + intent.getStringExtra("userInput"));
     }
 }

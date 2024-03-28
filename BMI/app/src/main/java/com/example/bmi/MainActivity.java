@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             txvShow.setText(String.format("%.2f", bmi));
         }
         else {
-            edtHeight.setText("");
-            edtWeight.setText("");
+            edtHeight.setText("0");
+            edtWeight.setText("0");
             txvShow.setText("");
         }
     }
