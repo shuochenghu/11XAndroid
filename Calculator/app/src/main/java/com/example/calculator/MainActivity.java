@@ -26,19 +26,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_main);
 
-        /*GridLayout keysGL = (GridLayout) findViewById(R.id.keys);
-
-        int kbHeight = (int) (keysGL.getHeight() / keysGL.getRowCount());
-        int kbWidth = (int) (keysGL.getWidth()/keysGL.getColumnCount());
-
-        Button btn;
-
-        for( int i=0; i< keysGL.getChildCount();i++){
-            btn = (Button) keysGL.getChildAt(i);
-            btn.setHeight(kbHeight);
-            btn.setWidth(kbWidth);
-            btn.setTextSize(TypedValue.COMPLEX_UNIT_SP, 36 );
-        }*/
     }
 
     public void onWindowFocusChanged (boolean hasFocus) {
