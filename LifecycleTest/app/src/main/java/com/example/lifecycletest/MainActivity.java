@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
-    private  static String TAG = "LifeCycleTest";
+    private  final String TAG = "LifeCycleTest";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.v(TAG, "onCreate!");

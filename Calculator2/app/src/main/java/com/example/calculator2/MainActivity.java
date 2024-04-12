@@ -26,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_main);
+        GridLayout keysGL = (GridLayout) findViewById(R.id.keys);
+        int kbHeight = (int) (keysGL.getHeight() / keysGL.getRowCount());
+        int kbWidth = (int) (keysGL.getWidth()/keysGL.getColumnCount());
+
+        Log.v("Value", "kbHeight_before = "+ kbHeight);
+        Log.v("Value", "kbWidth_before = " + kbWidth);
 
     }
 
@@ -51,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         int kbHeight = (int) (keysGL.getHeight() / keysGL.getRowCount());
         int kbWidth = (int) (keysGL.getWidth()/keysGL.getColumnCount());
 
-        Log.v("Value", "kbHeight = "+ kbHeight);
-        Log.v("Value", "kbWidth = " + kbWidth);
+        Log.v("Value", "kbHeight_after = "+ kbHeight);
+        Log.v("Value", "kbWidth_after = " + kbWidth);
         Button btn;
 
         for( int i=0; i< keysGL.getChildCount();i++){
