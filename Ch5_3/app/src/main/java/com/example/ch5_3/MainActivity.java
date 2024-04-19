@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         float size = txvOutput.getTextSize();
-        Log.v("SIZE", "size = " + size);
+        Log.v("SIZE", "size = " + px2sp(this, size));
         //txvOutput.setTextSize(TypedValue.COMPLEX_UNIT_PX,size + 5);
         txvOutput.setTextSize(px2sp(this, size) + 5);
     }
