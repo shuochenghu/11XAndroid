@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         output.setTextSize(size);
         Button btn = (Button) findViewById(R.id.button);
         Button btn2 = (Button) findViewById(R.id.button2);
+        Button btnExit = (Button) findViewById(R.id.btnExit);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,15 +33,21 @@ public class MainActivity extends AppCompatActivity {
                 output.setTextSize(size);
             }
         });
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
-    /*@Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.button) {
-            size++;
-        }
-        else {
-            size--;
-        }
-        output.setTextSize(size);
-    }*/
+//    @Override
+//    public void onClick(View view) {
+//        if (view.getId() == R.id.button) {
+//            size++;
+//        }
+//        else {
+//            size--;
+//        }
+//        output.setTextSize(size);
+//    }
 }
