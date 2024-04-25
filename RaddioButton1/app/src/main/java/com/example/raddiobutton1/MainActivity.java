@@ -35,23 +35,23 @@ public class MainActivity extends AppCompatActivity{
 
                 RadioGroup type = (RadioGroup) findViewById(R.id.rgType);
                 int checkedId = type.getCheckedRadioButtonId();
-                switch(checkedId) {
-                    case R.id.rdbAdult:
-                        outputStr += getResources().getString(R.string.regularticket) + "\n";
-                        break;
-                    case R.id.rdbChild:
-                        outputStr += getResources().getString(R.string.childticket )+ "\n";
-                        break;
-                    case R.id.rdbStudent:
-                        outputStr += getResources().getString(R.string.studentticket) + "\n";
-                        break;
-                }
-//                if (type.getCheckedRadioButtonId() ==  R.id.rdbAdult)
-//                    outputStr += "全票\n";
-//                else if (type.getCheckedRadioButtonId() ==  R.id.rdbChild)
-//                    outputStr += "兒童票\n";
-//                else
-//                    outputStr += "學生票\n";
+//                switch(checkedId) {
+//                    case R.id.rdbAdult:
+//                        outputStr += getResources().getString(R.string.regularticket) + "\n";
+//                        break;
+//                    case R.id.rdbChild:
+//                        outputStr += getResources().getString(R.string.childticket )+ "\n";
+//                        break;
+//                    case R.id.rdbStudent:
+//                        outputStr += getResources().getString(R.string.studentticket) + "\n";
+//                        break;
+//                }
+                if (type.getCheckedRadioButtonId() ==  R.id.rdbAdult)
+                    outputStr += "全票\n";
+                else if (type.getCheckedRadioButtonId() ==  R.id.rdbChild)
+                    outputStr += "兒童票\n";
+                else
+                    outputStr += "學生票\n";
 
                 TextView output = (TextView) findViewById(R.id.lblOutput);
                 output.setText(outputStr);
