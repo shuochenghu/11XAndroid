@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity{
                 RadioButton boy = (RadioButton) findViewById(R.id.rdbBoy);
                 RadioButton girl = (RadioButton) findViewById(R.id.rdbGirl);
                 if (boy.isChecked())
-                    outputStr += "男生\n";
+                    outputStr += getResources().getString(R.string.male) + "\n";
                 else if (girl.isChecked())
-                    outputStr += "女生\n";
+                    outputStr += getResources().getString(R.string.female)+ "\n";
 
                 RadioGroup type = (RadioGroup) findViewById(R.id.rgType);
                 int checkedId = type.getCheckedRadioButtonId();
@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity{
 //                        break;
 //                }
                 if (type.getCheckedRadioButtonId() ==  R.id.rdbAdult)
-                    outputStr += "全票\n";
+                    outputStr += getResources().getString(R.string.regularticket) + "\n";
                 else if (type.getCheckedRadioButtonId() ==  R.id.rdbChild)
-                    outputStr += "兒童票\n";
+                    outputStr += getResources().getString(R.string.childticket )+ "\n";
                 else
-                    outputStr += "學生票\n";
+                    outputStr += getResources().getString(R.string.studentticket) + "\n";
 
                 TextView output = (TextView) findViewById(R.id.lblOutput);
                 output.setText(outputStr);
