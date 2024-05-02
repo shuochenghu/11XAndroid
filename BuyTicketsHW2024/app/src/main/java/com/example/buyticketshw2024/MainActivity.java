@@ -93,8 +93,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void showResult() {
-        outputStr = String.format("%s\n%s\n%d張\n共 %d元", gender, type, numberOfTickets,
-                price * numberOfTickets);
+        String count = getResources().getString(R.string.numberOfTickets);
+        String total = getResources().getString(R.string.total);
+        outputStr = String.format("%s\n%s\n%s%d\n%s%d", gender, type, count, numberOfTickets,
+                total, price * numberOfTickets);
         ((TextView) findViewById(R.id.lblOutput)).setText(outputStr);
     }
 }
