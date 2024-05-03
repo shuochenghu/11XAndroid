@@ -11,4 +11,5 @@
     <string name="ticketTYpe">票種：</string>
     <string name="gender">性別：</string>
     <string name="total">金額：</string>
+    <string name="detail">訂單明細：</string>
 </resources>

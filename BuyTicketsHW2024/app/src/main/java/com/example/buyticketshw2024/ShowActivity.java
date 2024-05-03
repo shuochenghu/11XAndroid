@@ -21,7 +21,7 @@ public class ShowActivity extends AppCompatActivity {
         txvShow.setTextSize(30);
 
         Intent intent = getIntent();
-        txvShow.setText("訂單明細：" + "\n" + intent.getStringExtra("outputStr"));
+        txvShow.setText(getResources().getString(R.string.detail) + "\n" + intent.getStringExtra("outputStr"));
 
     }
 }
