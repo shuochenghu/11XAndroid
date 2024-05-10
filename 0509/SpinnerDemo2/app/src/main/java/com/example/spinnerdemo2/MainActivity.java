@@ -3,6 +3,7 @@ package com.example.spinnerdemo2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         int v1, v2;
         double r = 0.0;
+        Log.v("Position", String.valueOf(position));
         try {
             v1 = Integer.parseInt(opd1.getText().toString());
             v2 = Integer.parseInt(opd2.getText().toString());

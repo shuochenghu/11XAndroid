@@ -3,6 +3,7 @@ package com.example.spinnerdemo;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
                 //String[] steaks = getResources().getStringArray(R.array.steaks);
                 Spinner sp = (Spinner) findViewById(R.id.spinner);
                 //int index = sp.getSelectedItemPosition();
+                //Log.v("SelectedPosition", String.valueOf(index));
                 TextView output = (TextView) findViewById(R.id.lblOutput);
                 //output.setText("牛排要" + steaks[index]);
                 output.setText("牛排要" + sp.getSelectedItem().toString());
