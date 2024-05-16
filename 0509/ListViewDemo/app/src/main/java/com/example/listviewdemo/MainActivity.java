@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView output = (TextView) findViewById(R.id.lblOutput);
                 output.setText("你是住在: " + cities[position]);
+                Toast.makeText(MainActivity.this, "你是住在: " + cities[position],
+                        Toast.LENGTH_SHORT).show();
             }
         });
     }
