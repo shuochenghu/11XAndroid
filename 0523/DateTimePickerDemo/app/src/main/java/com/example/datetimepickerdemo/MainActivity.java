@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity
                         dt.get(Calendar.YEAR),
                         dt.get(Calendar.MONTH),
                         dt.get(Calendar.DAY_OF_MONTH));
+                //dlg.getDatePicker().setMinDate(dt.getTimeInMillis() - 1000);//只選今天以後的日期
+                dt.add(Calendar.DAY_OF_MONTH, 1); // Add one day to the current date
+                dlg.getDatePicker().setMinDate(dt.getTimeInMillis()); // Set the minimum date to tomorrow
                 dlg.show();
             }
         });
@@ -49,7 +52,7 @@ public class MainActivity extends AppCompatActivity
                              }
                          },
                          dt.get(Calendar.HOUR),
-                         dt.get(Calendar.MINUTE), false);
+                         dt.get(Calendar.MINUTE), true);
                  dlg.show();
             }
         });

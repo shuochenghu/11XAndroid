@@ -15,6 +15,8 @@ public class OpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_op);
+        CheckBox chkDivide = (CheckBox) findViewById(R.id.chkDivide);
+        chkDivide.setEnabled(false);
 
         Button button2 = (Button) findViewById(R.id.button2);
         button2.setOnClickListener(new View.OnClickListener() {
@@ -23,7 +25,7 @@ public class OpActivity extends AppCompatActivity {
                 int opd1, opd2;
                 double result = 0.0;
                 RadioButton rdbAdd, rdbSubtract, rdbMultiply, rdbDivide;
-                CheckBox chkDivide;
+
                 // 取得傳遞的資料
                 Bundle bundle = OpActivity.this.getIntent().getExtras();
                 if (bundle == null) return;
@@ -33,19 +35,23 @@ public class OpActivity extends AppCompatActivity {
                 // 取得選取的運算子
                 rdbAdd = (RadioButton) findViewById(R.id.rdbAdd);
                 if (rdbAdd.isChecked()) {
+                    chkDivide.setEnabled(false);
                     result = opd1 + opd2; // 加
                 }
                 rdbSubtract = (RadioButton) findViewById(R.id.rdbSubtract);
                 if (rdbSubtract.isChecked()) {
+                    chkDivide.setEnabled(false);
                     result = opd1 - opd2;  // 減
                 }
                 rdbMultiply = (RadioButton) findViewById(R.id.rdbMultiply);
                 if (rdbMultiply.isChecked()) {
+                    chkDivide.setEnabled(false);
                     result = opd1 * opd2;  // 乘
                 }
                 rdbDivide = (RadioButton) findViewById(R.id.rdbDivide);
-                chkDivide = (CheckBox) findViewById(R.id.chkDivide);
+                //chkDivide = (CheckBox) findViewById(R.id.chkDivide);
                 if (rdbDivide.isChecked()) {
+                    chkDivide.setEnabled(true);
                     if (chkDivide.isChecked())
                         result = opd1 / opd2;  // 整數除法
                     else
